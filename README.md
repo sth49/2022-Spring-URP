@@ -5,9 +5,9 @@
 # 1. Snow Data Augmentation
 9000장의 VFP290K와 200장의 눈 데이터인 dawn를 사용해 CycleGAN을 학습시켰다. 학습된 모델을 이용해서 VFP290K의 전체 데이터를 추론하였고, 총 294713장의 데이터가 생성되었다.
 
-'''
+```
 bash train.sh
-'''
+```
 
 ![1](https://user-images.githubusercontent.com/64757426/173103132-0c282f4c-fd17-4a68-aae5-20eed8def08e.png)
 
