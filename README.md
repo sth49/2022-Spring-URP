@@ -22,3 +22,16 @@ python train.py --dataroot ./datasets/snow --name snow_cyclegan --model cycle_ga
 
 그리고 이렇게 생성된 데이터셋들을 바탕으로 YOLOv5를 학습시켰다. 총 세 가지에 대해서 학습을 시켰는데, vfp290k만 학습시킨 것, winter vfp290k만 학습시킨 것, 그리고 두 종류의 데이터를 섞어서 학습시킨 것이다. 학습시킨 데이터 셋과 다른 데이터를 이용해 성능을 측정했을 때, 성능이 안 좋았지만, 두 데이터를 함께 학습시킨 모델에서 성능향상을 보였다.   
 ![yolo](https://user-images.githubusercontent.com/64757426/173105393-7378aa73-ea7b-4e47-964d-14f6f7f06726.png)
+
+
+# 2. X-ray Data 생성
+
+Kaggle에서 제공해주는 데이터셋인 chest X-ray 이미지를 가지고 총 1341장을 사용해 흉부 x선 이미지를 학습시켰다. 모델은 세 가지 생성모델인, GAN, DCGAN, VAE를 사용하였다. 학습 이후 30장의 X-ray 이미지를 생성한 후 IS를 측정해보았다. DCGAN이 성능이 가장 좋았으며 VAE는 아무래도 autoencoder를 사용하다보니 생성된 사진이 흐릿한 경향이 있었다.   
+
+![yolo](https://user-images.githubusercontent.com/64757426/173106029-145fb4f1-613b-482c-8575-1d62a37d83d1.png)
+
+* 학습은 각 모델에 따른 jupyter notebook 참고
+
+
+
+
